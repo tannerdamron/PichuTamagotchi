@@ -44,27 +44,7 @@ body {
   text-align: center;
 }
 
-#dead {
-  display: none;
-}
-
-#pichu {
-  display: none;
-}
-
-.hidden {
-  display: none;
-}
-
-#pikachu {
-  display: none;
-}
-
-#raichu {
-  display: none;
-}
-
-#raichuOld {
+#dead, #pichu, .hidden, #pikachu, #raichu, #raichuOld, #pikachuFeed {
   display: none;
 }
 

@@ -9,6 +9,23 @@ export default class Tamagotchi {
     this.restLevel = 100;
   }
 
+  callApi() {
+    $.ajax({
+      url: `https://pokeapi.co/api/v2/pokemon/pikachu/`,
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+        $('.showPokemon').text(`The pokemon is pikachu`);
+        $('.showMoves').text(`The moves for Pikachu is ${response.main.ability}.`);
+      },
+      error: function() {
+        $('#errors').text("There was an error processing your request. Please try again.");
+      },
+    });
+  }
+
   setHunger() {
     let interval = setInterval(() => {
       let hunger = $('#hunger');

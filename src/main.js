@@ -5,6 +5,19 @@ import './styles.css';
 $(document).ready(function () {
   $('#nameForm').submit(function (event) {
     event.preventDefault();
+    $.ajax({
+      url: `https://pokeapi.co/api/v2/ability/31/`,
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+        $('.showMoves').text(`The moves for Pikachu are ${response.name}.`);
+      },
+      error: function() {
+        $('#errors').text("There was an error processing your request. Please try again.");
+      },
+    });
     let newTamagotchi = new Tamagotchi($("#tamagotchiName").val());
     newTamagotchi.getOlder();
     $('.hidden').show();
