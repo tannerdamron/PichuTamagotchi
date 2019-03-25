@@ -7,13 +7,13 @@ This game lets the user feed, rest, and exercise a tamagotchi, and user tries to
 ## Specifications
 * User can feed tamagotchi by clicking feed button
 * > Input: User feeds the tamagotchi
-* > Output: Tamagotchi food level goes up by 2
+* > Output: Tamagotchi food level goes up by 1
 * User can give the tamagotchi a nap
 * > Input: User naps the tamagotchi
-* > Output: Tamagotchi rest level goes up by 5
+* > Output: Tamagotchi rest level goes up by 1
 * User can take the tamagotchi on a walk
-* > Input: User walks the tamagotchi
-* > Output: Tamagotchi excercise level goes up by 3
+* > Input: User excercises the tamagotchi
+* > Output: Tamagotchi excercise level goes up by 1
 
 
 ### Setup Instructions

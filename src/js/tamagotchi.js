@@ -51,7 +51,7 @@ export default class Tamagotchi {
       if (this.foodLevel <= 0 || this.excerciseLevel <= 0 || this.restLevel <= 0) {
         clearInterval(interval);
       }
-    }, 1000);
+    }, 5000);
   }
 
   didTamagotchiDie() {

@@ -20,12 +20,10 @@ $(document).ready(function () {
       $('#excerciseLevels').text(newTamagotchi.excerciseLevel);
       $('#restLevels').text(newTamagotchi.restLevel);
       $('#dead').text(newTamagotchi.didTamagotchiDie());
-      console.log(newTamagotchi.didTamagotchiDie());
       if (newTamagotchi.foodLevel <= 0 || newTamagotchi.excerciseLevel <= 0 || newTamagotchi.restLevel <= 0) {
         $('#dead').show();
         $('#buttons').hide();
-      }
-      if (newTamagotchi.age >= 10 && newTamagotchi.age < 30) {
+      } else if (newTamagotchi.age >= 10 && newTamagotchi.age < 30) {
         $('#pikachu').show();
         $('#pichu').hide();
       } else if (newTamagotchi.age >= 30 && newTamagotchi.age < 50) {
