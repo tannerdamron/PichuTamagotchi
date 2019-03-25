@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tamagotchi</title>
+</head>
+
+<body>
+  <h1>Press the buttons to take care of your Pichu!</h1>
+  <h3>Don't let any of the levels fall to 0 or else your pokemon will die</h3>
+  <form id="nameForm">
+    <label for="tamagotchiName">Enter a name for your pichu</label>
+    <input id="tamagotchiName" type="text"></input>
+    <button class="smallButton" class="start">Start Game</button>
+  </form>
+  <h1><span class="name"></span> Hunger Level: <span id="foodLevels"></span></h1>
+  <div class='progress-bar'>
+    <div class='bar' id='hunger'></div>
+  </div>
+  <h1><span class="name"></span> Excercise Level: <span id="excerciseLevels"></span></h1>
+  <div class='progress-bar2'>
+    <div class='bar2' id='excercise'></div>
+  </div>
+  <h1><span class="name"></span> Rest Level: <span id="restLevels"></span></h1>
+  <div class='progress-bar3'>
+    <div class='bar3' id='rest'></div>
+  </div>
+  <div id=buttons>
+    <button class="bigButton" id="feed"><h3>Feed</h3></button>
+    <button class="bigButton" id="workout"><h3>Excercise</h3></button>
+    <button class="bigButton" id="nap"><h3>Rest</h3></button>
+  </div>
+  <h1 class="hidden">Your Tamagotchi's age: <span id="age"></span></h1>
+  <div class="hiddenImage" id="pichu">
+    <img src="https://static.pokemonpets.com/images/monsters-images-300-300/172-Pichu.png">
+  </div>
+  <div class="hiddenImage" id="pikachu">
+    <img src="https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786735hqgpr.png">
+  </div>
+  <div class="hiddenImage" id="raichu">
+    <img src="https://static.pokemonpets.com/images/monsters-images-300-300/26-Raichu.png">
+  </div>
+  <div class="hiddenImage" id="raichuOld">
+    <img src="http://static.pokemonpets.com/images/monsters-images-300-300/10026-Shiny-Mega-Raichu.png">
+  </div>
+  <div id="dead">
+    <form id="nameForm">
+      <h1><span class="name"></span> has died :(</h1>
+      <button class="smallButton" class="start">Start New Game</button>
+    </form>
+  </div>
+</body>
+
+</html>

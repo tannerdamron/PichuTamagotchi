@@ -1,0 +1,114 @@
+.bigButton {
+  width: 100px;
+  height: 100px;
+}
+
+#feed {
+  background: linear-gradient(rgb(220, 0, 0), rgb(192, 0, 0));
+}
+
+#workout {
+  background: linear-gradient(lightblue, rgb(50, 144, 187));
+}
+
+#nap {
+  background: linear-gradient(rgb(147, 255, 114), rgb(71, 211, 28));
+}
+
+.smallButton {
+  width: 50px;
+  height: 50px;
+}
+
+body {
+  text-align: center;
+}
+
+#dead {
+  display: none;
+}
+
+#pichu {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#pikachu {
+  display: none;
+}
+
+#raichu {
+  display: none;
+}
+
+#raichuOld {
+  display: none;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.progress-bar {
+  margin: 2em auto;
+  height: 20px;
+  background: white;
+  width: 500px;
+  border: solid thin black;
+}
+
+.progress-bar .bar {
+  -webkit-transition: width .1s;
+  -moz-transition: width .1s;
+  transition: width .1s;
+  background: linear-gradient(rgb(220, 0, 0), rgb(192, 0, 0));
+  background: linear-gradient(rgb(220, 0, 0), rgb(192, 0, 0));
+  background: linear-gradient(rgb(220, 0, 0), rgb(192, 0, 0));
+  position: absolute;
+  height: 20px;
+  width: 500px;
+}
+
+.progress-bar2 {
+  margin: 2em auto;
+  height: 20px;
+  background: white;
+  width: 500px;
+  border: solid thin black;
+}
+
+.progress-bar2 .bar2 {
+  -webkit-transition: width .1s;
+  -moz-transition: width .1s;
+  transition: width .1s;
+  background: linear-gradient(lightblue, rgb(50, 144, 187));
+  background: linear-gradient(lightblue, rgb(50, 144, 187));
+  background: linear-gradient(lightblue, rgb(50, 144, 187));
+  position: absolute;
+  height: 20px;
+  width: 500px;
+}
+
+.progress-bar3 {
+  margin: 2em auto;
+  height: 20px;
+  background: white;
+  width: 500px;
+  border: solid thin black;
+}
+
+.progress-bar3 .bar3 {
+  -webkit-transition: width .1s;
+  -moz-transition: width .1s;
+  transition: width .1s;
+  background: linear-gradient(rgb(147, 255, 114), rgb(71, 211, 28));
+  background: linear-gradient(rgb(147, 255, 114), rgb(71, 211, 28));
+  background: linear-gradient(rgb(147, 255, 114), rgb(71, 211, 28));
+  position: absolute;
+  height: 20px;
+  width: 500px;
+}
