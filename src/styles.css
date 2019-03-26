@@ -9,6 +9,10 @@ button:hover {
   cursor: pointer;
 }
 
+li{
+  list-style: none;
+}
+
 #startButton {
   font-size: 20px;
   text-shadow: 2px 2px lightslategray;
@@ -44,7 +48,7 @@ body {
   text-align: center;
 }
 
-#dead, #pichu, .hidden, #pikachu, #raichu, #raichuOld, #pikachuFeed {
+#dead, #pichu, .hidden, #pikachu, #raichu, #raichuOld, #pikachuFeed, .showMoves {
   display: none;
 }
 

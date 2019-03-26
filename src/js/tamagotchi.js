@@ -9,23 +9,6 @@ export default class Tamagotchi {
     this.restLevel = 100;
   }
 
-  callApi() {
-    $.ajax({
-      url: `https://pokeapi.co/api/v2/pokemon/pikachu/`,
-      type: 'GET',
-      data: {
-        format: 'json'
-      },
-      success: function(response) {
-        $('.showPokemon').text(`The pokemon is pikachu`);
-        $('.showMoves').text(`The moves for Pikachu is ${response.main.ability}.`);
-      },
-      error: function() {
-        $('#errors').text("There was an error processing your request. Please try again.");
-      },
-    });
-  }
-
   setHunger() {
     let interval = setInterval(() => {
       let hunger = $('#hunger');
@@ -102,4 +85,22 @@ export default class Tamagotchi {
       this.restLevel = 100;
     }
   }
+}
+
+export function callApi() {
+  let request = new XMLHttpRequest();
+  const url = `https://pokeapi.co/api/v2/pokemon/pikachu`;
+  request.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      getElements(response);
+    }
+  };
+  request.open("GET", url, true);
+  request.send();
+  const getElements = function (response) {
+    for (let i = 0; i <= 20; i++) {
+      $('.showMoves').append(`<li>` + JSON.stringify(response.moves[i].move.name) + `</li>`);
+    }
+  };
 }
