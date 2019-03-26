@@ -9,8 +9,6 @@
 </head>
 
 <body>
-    <div class="errors"></div>
-    <ul class="showMoves">The moves for Pikachu are:</ul>
   <h1>Press the buttons to take care of your Pichu!</h1>
   <h3>Don't let any of the levels fall to 0 or else your pokemon will die</h3>
   <form id="nameForm">
@@ -36,21 +34,29 @@
     <button class="bigButton" id="nap"><h3>Rest</h3></button>
   </div>
   <h1 class="hidden"><span class="name"></span>'s age: <span id="age"></span></h1>
-  <div class="hiddenImage" id="pichu">
-    <img src="https://static.pokemonpets.com/images/monsters-images-300-300/172-Pichu.png">
-  </div>
-  <div class="hiddenImage" id="pikachu">
-    <h3>Your pichu evolved into a pikachu!</h3>
-    <img src="https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786735hqgpr.png">
-    <img id="pikachuFeed"src="http://konachan.com/jpeg/6b95fbc944d7c46b974379e0d2c38d4a/Konachan.com%20-%20156530%20candy%20food%20lollipop%20mochi_%28empty_p%29%20pikachu%20pokemon%20tail.jpg">
-  </div>
-  <div class="hiddenImage" id="raichu">
-      <h3>Your pikachu evolved into a raichu!</h3>
-    <img src="https://static.pokemonpets.com/images/monsters-images-300-300/26-Raichu.png">
-  </div>
-  <div class="hiddenImage" id="raichuOld">
-      <h3>Your raichu is getting super old!</h3>
-    <img src="http://static.pokemonpets.com/images/monsters-images-300-300/10026-Shiny-Mega-Raichu.png">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="hiddenImage" id="pichu">
+        <img src="https://static.pokemonpets.com/images/monsters-images-300-300/172-Pichu.png">
+      </div>
+      <div class="hiddenImage" id="pikachu">
+        <h3>Your pichu evolved into a pikachu!</h3>
+        <img src="https://purepng.com/public/uploads/large/purepng.com-pokemonpokemonpocket-monsterspokemon-franchisefictional-speciesone-pokemonmany-pokemonone-pikachu-1701527786735hqgpr.png">
+        <img id="pikachuFeed"src="http://konachan.com/jpeg/6b95fbc944d7c46b974379e0d2c38d4a/Konachan.com%20-%20156530%20candy%20food%20lollipop%20mochi_%28empty_p%29%20pikachu%20pokemon%20tail.jpg">
+      </div>
+      <div class="hiddenImage" id="raichu">
+          <h3>Your pikachu evolved into a raichu!</h3>
+        <img src="https://static.pokemonpets.com/images/monsters-images-300-300/26-Raichu.png">
+      </div>
+      <div class="hiddenImage" id="raichuOld">
+          <h3>Your raichu is getting super old!</h3>
+        <img src="http://static.pokemonpets.com/images/monsters-images-300-300/10026-Shiny-Mega-Raichu.png">
+      </div>
+      <div class="col-md-6">
+          <div class="errors"></div>
+          <h3 class="showMoves">The coolest move for <span class="pokemonName"></span> is: <span class="moves"></span></h3>
+      </div>
+    </div>
   </div>
   <div id="dead">
     <form id="nameForm">

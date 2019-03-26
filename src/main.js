@@ -1,14 +1,13 @@
 import Tamagotchi from "../src/js/tamagotchi";
-import { callApi } from "../src/js/tamagotchi";
 import $ from 'jquery';
+import 'bootstrap';
 import './styles.css';
 
 $(document).ready(function () {
   $('#nameForm').submit(function (event) {
     event.preventDefault();
-    $('.showMoves').show();
-    callApi();
     let newTamagotchi = new Tamagotchi($("#tamagotchiName").val());
+    $('.showMoves').show();
     newTamagotchi.getOlder();
     $('.hidden').show();
     $('#pichu').show();
@@ -17,6 +16,9 @@ $(document).ready(function () {
     newTamagotchi.setHunger();
     newTamagotchi.setExcercise();
     newTamagotchi.setRest();
+    setInterval(function(){
+      newTamagotchi.checkAgeForApi();
+    }, 500);
     setInterval(function () {
       $('#age').text(newTamagotchi.age);
       $('#foodLevels').text(newTamagotchi.foodLevel);
@@ -26,6 +28,7 @@ $(document).ready(function () {
       if (newTamagotchi.foodLevel <= 0 || newTamagotchi.excerciseLevel <= 0 || newTamagotchi.restLevel <= 0) {
         $('#dead').show();
         $('#buttons').hide();
+        $('.showMoves').hide();
       } else if (newTamagotchi.age >= 10 && newTamagotchi.age < 30) {
         $('#pikachu').show();
         $('#pichu').hide();

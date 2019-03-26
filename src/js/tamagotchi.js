@@ -51,7 +51,7 @@ export default class Tamagotchi {
       if (this.foodLevel <= 0 || this.excerciseLevel <= 0 || this.restLevel <= 0) {
         clearInterval(interval);
       }
-    }, 5000);
+    }, 500);
   }
 
   didTamagotchiDie() {
@@ -85,9 +85,43 @@ export default class Tamagotchi {
       this.restLevel = 100;
     }
   }
+
+  checkAgeForApi() {
+    let interval = setInterval(() => {
+      if (this.age < 10) {
+        callPichuApi();
+        clearInterval(interval);
+      } else if (this.age >= 10 && this.age < 30) {
+        callPikachuApi();
+        clearInterval(interval);
+      } else {
+        callRaichuApi();
+        clearInterval(interval);
+      }
+    }, 200);
+  }
 }
 
-export function callApi() {
+export function callPichuApi() {
+  let request = new XMLHttpRequest();
+  const url = `https://pokeapi.co/api/v2/pokemon/pichu`;
+  request.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      getElements(response);
+    }
+  };
+  request.open("GET", url, true);
+  request.send();
+  const getElements = function (response) {
+    $('.pokemonName').text(JSON.stringify(response.name))
+    for (let i = 0; i <= 20; i++) {
+      $('.moves').text(JSON.stringify(response.moves[i].move.name));
+    }
+  };
+}
+
+export function callPikachuApi() {
   let request = new XMLHttpRequest();
   const url = `https://pokeapi.co/api/v2/pokemon/pikachu`;
   request.onreadystatechange = function () {
@@ -99,8 +133,28 @@ export function callApi() {
   request.open("GET", url, true);
   request.send();
   const getElements = function (response) {
+    $('.pokemonName').text(JSON.stringify(response.name))
     for (let i = 0; i <= 20; i++) {
-      $('.showMoves').append(`<li>` + JSON.stringify(response.moves[i].move.name) + `</li>`);
+      $('.moves').text(JSON.stringify(response.moves[i].move.name));
+    }
+  };
+}
+
+export function callRaichuApi() {
+  let request = new XMLHttpRequest();
+  const url = `https://pokeapi.co/api/v2/pokemon/raichu`;
+  request.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      getElements(response);
+    }
+  };
+  request.open("GET", url, true);
+  request.send();
+  const getElements = function (response) {
+    $('.pokemonName').text(JSON.stringify(response.name))
+    for (let i = 0; i <= 20; i++) {
+      $('.moves').text(JSON.stringify(response.moves[i].move.name));
     }
   };
 }
