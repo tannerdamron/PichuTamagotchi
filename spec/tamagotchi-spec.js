@@ -28,7 +28,6 @@ describe('Tamagotchi', function () {
   it('should get very hungry if the food level drops below zero', function () {
     let tan = new Tamagotchi("Tan");
     tan.foodLevel = 0;
-    console.log(tan.didTamagotchiDie());
     expect(tan.foodLevel).toEqual(`Tan has died! :(`);
   });
 

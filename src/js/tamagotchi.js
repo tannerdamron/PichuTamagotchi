@@ -114,9 +114,9 @@ export function callPichuApi() {
   request.open("GET", url, true);
   request.send();
   const getElements = function (response) {
-    $('.pokemonName').text(JSON.stringify(response.name))
-    for (let i = 0; i <= 20; i++) {
-      $('.moves').text(JSON.stringify(response.moves[i].move.name));
+    $('.pokemonName').text(JSON.stringify(response.name));
+    for (let i = 1; i <= 5; i++) {
+      $('.moves' + i).text(JSON.stringify(response.moves[i].move.name));
     }
   };
 }
@@ -133,9 +133,9 @@ export function callPikachuApi() {
   request.open("GET", url, true);
   request.send();
   const getElements = function (response) {
-    $('.pokemonName').text(JSON.stringify(response.name))
-    for (let i = 0; i <= 20; i++) {
-      $('.moves').text(JSON.stringify(response.moves[i].move.name));
+    $('.pokemonName').text(JSON.stringify(response.name));
+    for (let i = 1; i <= 5; i++) {
+      $('.moves' + i).text(JSON.stringify(response.moves[i].move.name));
     }
   };
 }
@@ -152,9 +152,9 @@ export function callRaichuApi() {
   request.open("GET", url, true);
   request.send();
   const getElements = function (response) {
-    $('.pokemonName').text(JSON.stringify(response.name))
-    for (let i = 0; i <= 20; i++) {
-      $('.moves').text(JSON.stringify(response.moves[i].move.name));
+    $('.pokemonName').text(JSON.stringify(response.name));
+    for (let i = 1; i <= 5; i++) {
+      $('.moves' + i).text(JSON.stringify(response.moves[i].move.name));
     }
   };
 }
