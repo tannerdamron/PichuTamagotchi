@@ -4,9 +4,31 @@ import 'bootstrap';
 import './styles.css';
 
 $(document).ready(function () {
+  $('#bulbasaurForm').submit(function(event) {
+    event.preventDefault();
+    const pokemon = $("#bulbasaur").val();
+    $('#eggSelection').hide();
+    $('#game').show();
+    console.log(pokemon);
+  });
+  $('#charmanderForm').submit(function(event) {
+    event.preventDefault();
+    const pokemon = $("#charmander").val();
+    $('#eggSelection').hide();
+    $('#game').show();
+    console.log(pokemon);
+  });
+  $('#squirtleForm').submit(function(event) {
+    event.preventDefault();
+    const pokemon = $("#squirtle").val();
+    $('#eggSelection').hide();
+    $('#game').show();
+    console.log(pokemon);
+  });
   $('#nameForm').submit(function (event) {
     event.preventDefault();
-    let newTamagotchi = new Tamagotchi($("#tamagotchiName").val());
+    let tamagotchiName = $("#tamagotchiName").val();
+    let newTamagotchi = new Tamagotchi(tamagotchiName);
     $('.showMoves').show();
     newTamagotchi.getOlder();
     $('.hidden').show();

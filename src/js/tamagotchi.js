@@ -1,12 +1,13 @@
 import $ from 'jquery';
 
 export default class Tamagotchi {
-  constructor(name) {
+  constructor(name, pokemon) {
     this.name = name;
     this.age = 0;
     this.foodLevel = 100;
     this.excerciseLevel = 100;
     this.restLevel = 100;
+    this.pokemon = pokemon;
   }
 
   setHunger() {
@@ -51,7 +52,7 @@ export default class Tamagotchi {
       if (this.foodLevel <= 0 || this.excerciseLevel <= 0 || this.restLevel <= 0) {
         clearInterval(interval);
       }
-    }, 3000);
+    }, 500);
   }
 
   didTamagotchiDie() {

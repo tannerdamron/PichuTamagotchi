@@ -48,13 +48,18 @@ body {
   text-align: center;
 }
 
-#dead, #pichu, .hidden, #pikachu, #raichu, #raichuOld, #pikachuFeed, .showMoves {
+#dead, #pichu, .hidden, #pikachu, #raichu, #raichuOld, #pikachuFeed, .showMoves, #game {
   display: none;
 }
 
 img {
   width: 300px;
   height: 300px;
+}
+
+.egg {
+  width: 100px;
+  height: 100px;
 }
 
 .progress-bar {
